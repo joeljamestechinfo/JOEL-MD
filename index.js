@@ -1,3 +1,31 @@
+/*
+░█ 
+░░░░░██╗░█████╗░███████╗██╗░░░░░
+░░░░░██║██╔══██╗██╔════╝██║░░░░░
+░░░░░██║██║░░██║█████╗░░██║░░░░░
+██╗░░██║██║░░██║██╔══╝░░██║░░░░░
+╚█████╔╝╚█████╔╝███████╗███████╗
+░╚════╝░░╚════╝░╚══════╝╚══════╝
+
+WHATSAPP BOT BY @joel james tech
+Helpers - @joel james
+        - @joel it
+WHATSAPP - 255714595078
+SUPPORT GROUP - https://wa.me/255714595078
+Don't change this info else bot won't work by joeljames tech
+
+*/
+
+
+
+
+
+
+
+
+
+
+
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -52,7 +80,7 @@ async function downloadSessionData() {
         console.error('Please add your session to SESSION_ID env !!');
         return false;
     }
-    const sessdata = config.SESSION_ID.split("Ethix-MD&")[1];
+    const sessdata = config.SESSION_ID.split("Joel-Md&")[1];
     const url = `https://pastebin.com/raw/${sessdata}`;
     try {
         const response = await axios.get(url);
@@ -70,20 +98,20 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🤖 Ethix-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`🤖 JOEL-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["Ethix-MD", "safari", "3.3"],
+            browser: ["JOEL-MD", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "Ethix-MD whatsapp user bot" };
+                return { conversation: "JOEL-MD whatsapp user bot" };
             }
         });
 
@@ -95,8 +123,8 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("😃 Integration Successful️ ✅"));
-                    Matrix.sendMessage(Matrix.user.id, { text: `😃 Integration Successful️ ✅` });
+                    console.log(chalk.green("I'm joel md bot 😃"));
+                    Matrix.sendMessage(Matrix.user.id, { text: `am joel md bot 😃` });
                     initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
@@ -143,7 +171,7 @@ async function start() {
             await Matrix.readMessages([mek.key]);
             
             if (config.AUTO_STATUS_REPLY) {
-                const customMessage = config.STATUS_READ_MSG || '✅ Auto Status Seen Bot By Ethix-MD-V2';
+                const customMessage = config.STATUS_READ_MSG || '✅ Auto Status Seen Bot By joel tech';
                 await Matrix.sendMessage(fromJid, { text: customMessage }, { quoted: mek });
             }
         }
@@ -178,7 +206,7 @@ async function init() {
 init();
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('joel md bot is online comrade☺');
 });
 
 app.listen(PORT, () => {
