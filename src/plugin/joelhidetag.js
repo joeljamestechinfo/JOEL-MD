@@ -1,3 +1,36 @@
+/*
+░█ 
+░░░░░██╗░█████╗░███████╗██╗░░░░░
+░░░░░██║██╔══██╗██╔════╝██║░░░░░
+░░░░░██║██║░░██║█████╗░░██║░░░░░
+██╗░░██║██║░░██║██╔══╝░░██║░░░░░
+╚█████╔╝╚█████╔╝███████╗███████╗
+░╚════╝░░╚════╝░╚══════╝╚══════╝
+
+WHATSAPP BOT BY @joel james tech
+Helpers - @joel james
+        - @joel it
+WHATSAPP - 255714595078
+SUPPORT GROUP - https://wa.me/255714595078
+Don't change this info else bot won't work by joeljames tech
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import config from '../../config.cjs';
 
 const tagall = async (m, gss) => {
@@ -16,10 +49,10 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
     const botAdmin = participants.find(p => p.id === botNumber)?.admin;
     const senderAdmin = participants.find(p => p.id === m.sender)?.admin;
     
-        if (!m.isGroup) return m.reply("*📛 THIS COMMAND CAN ONLY BE USED IN GROUPS*");
+        if (!m.isGroup) return m.reply("*this is group command*");
 
-    if (!botAdmin) return m.reply("*📛 BOT MUST BE AN ADMIN TO USE THIS COMMAND*");
-    if (!senderAdmin) return m.reply("*📛 YOU MUST BE AN ADMIN TO USE THIS COMMAND*");
+    if (!botAdmin) return m.reply("*im not admin in this group idiot*");
+    if (!senderAdmin) return m.reply("*you are not admin in this group idiot*");
     // Extract the message to be sent
     let message = `乂 *Attention Everyone* 乂\n\n*Message:* ${m.body.slice(prefix.length + cmd.length).trim() || 'no message'}\n\n`;
         
@@ -32,7 +65,7 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
     gss.sendMessage(m.from, { text: m.quoted.text ? m.quoted.text : '', mentions: participants.map(a => a.id) }, { quoted: m });
   } catch (error) {
     console.error('Error:', error);
-    await m.reply('An error occurred while processing the command.');
+    await m.reply('reply a message.');
   }
 };
 
