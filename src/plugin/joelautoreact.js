@@ -1,3 +1,43 @@
+
+/*
+░█ 
+░░░░░██╗░█████╗░███████╗██╗░░░░░
+░░░░░██║██╔══██╗██╔════╝██║░░░░░
+░░░░░██║██║░░██║█████╗░░██║░░░░░
+██╗░░██║██║░░██║██╔══╝░░██║░░░░░
+╚█████╔╝╚█████╔╝███████╗███████╗
+░╚════╝░░╚════╝░╚══════╝╚══════╝
+
+WHATSAPP BOT BY @joel james tech
+Helpers - @joel james
+        - @joel it
+WHATSAPP - 255714595078
+SUPPORT GROUP - https://wa.me/255714595078
+Don't change this info else bot won't work by joeljames tech
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import config from '../../config.cjs';
 
 const autoreadCommand = async (m, Matrix) => {
@@ -8,7 +48,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
 const text = m.body.slice(prefix.length + cmd.length).trim();
 
   if (cmd === 'autoreact') {
-    if (!isCreator) return m.reply("*📛 THIS IS AN OWNER COMMAND*");
+    if (!isCreator) return m.reply("*only joel md owner can use dis command*");
     let responseMessage;
 
     if (text === 'on') {
