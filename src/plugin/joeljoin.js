@@ -1,3 +1,37 @@
+/*
+░█ 
+░░░░░██╗░█████╗░███████╗██╗░░░░░
+░░░░░██║██╔══██╗██╔════╝██║░░░░░
+░░░░░██║██║░░██║█████╗░░██║░░░░░
+██╗░░██║██║░░██║██╔══╝░░██║░░░░░
+╚█████╔╝╚█████╔╝███████╗███████╗
+░╚════╝░░╚════╝░╚══════╝╚══════╝
+
+WHATSAPP BOT BY @joel james tech
+Helpers - @joel james
+        - @joel it
+WHATSAPP - 255714595078
+SUPPORT GROUP - https://wa.me/255714595078
+Don't change this info else bot won't work by joeljames tech
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import config from '../../config.cjs';
 
 const joinGroup = async (m, gss) => {
@@ -24,8 +58,8 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
     const result = args[0].split('https://chat.whatsapp.com/')[1];
 
     await gss.groupAcceptInvite(result)
-      .then((res) => m.reply(`*📛 SUCCESSFULLY JOINED THE GROUP. ${JSON.stringify(res)}`))
-      .catch((err) => m.reply(`*🚫 FAILED TO JOIN THE GROUP. ${JSON.stringify(err)}`));
+      .then((res) => m.reply(`*SUCCESSFULLY JOINED THE GROUP. ${JSON.stringify(res)}`))
+      .catch((err) => m.reply(`*FAILED TO JOIN THE GROUP. ${JSON.stringify(err)}`));
   } catch (error) {
     console.error('Error:', error);
     m.reply('An error occurred while processing the command.');
