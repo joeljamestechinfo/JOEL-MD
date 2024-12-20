@@ -123,7 +123,7 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("I'm joel md bot 😃"));
+                    console.log(chalk.green("Im joel md bot 😃"));
                     Matrix.sendMessage(Matrix.user.id, { text: `am joel md bot 😃` });
                     initialConnection = false;
                 } else {
