@@ -23,7 +23,7 @@ src="https://cardivo.vercel.app/api?name=JOEL%20MD%20V5&description=🥂THE%20WO
 
 
 
-<a href='https://github.com/joeljamestech/JOEL-MD/fork' target="_blank"><img alt='joel' src='https://img.shields.io/badge/FORK REPO-h?color=navy&style=for-the-badge&logo=visualstudiocode'/></a></p>
+<a href='https://github.com/joeljamestechinfo/JOEL-MD/fork' target="_blank"><img alt='joel' src='https://img.shields.io/badge/FORK REPO-h?color=navy&style=for-the-badge&logo=visualstudiocode'/></a></p>
 
 
 
