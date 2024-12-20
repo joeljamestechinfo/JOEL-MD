@@ -1,0 +1,62 @@
+/*
+░█ 
+░░░░░██╗░█████╗░███████╗██╗░░░░░
+░░░░░██║██╔══██╗██╔════╝██║░░░░░
+░░░░░██║██║░░██║█████╗░░██║░░░░░
+██╗░░██║██║░░██║██╔══╝░░██║░░░░░
+╚█████╔╝╚█████╔╝███████╗███████╗
+░╚════╝░░╚════╝░╚══════╝╚══════╝
+
+WHATSAPP BOT BY @joel james tech
+Helpers - @joel james
+        - @joel it
+WHATSAPP - 255714595078
+SUPPORT GROUP - https://wa.me/255714595078
+Don't change this info else bot won't work by joeljames tech
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import axios from 'axios';
+import config from '../../config.cjs';
+
+const stickerCommandHandler = async (m, gss) => {
+  const prefix = config.PREFIX;
+const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
+const text = m.body.slice(prefix.length + cmd.length).trim();
+  
+  const stickerCommands = ['cry', 'kiss', 'kill', 'kick', 'hug', 'pat', 'lick', 'bite', 'yeet', 'bully', 'bonk', 'wink', 'poke', 'nom', 'slap', 'smile', 'wave', 'awoo', 'blush', 'smug', 'dance', 'happy', 'sad', 'cringe', 'cuddle', 'shinobu', 'handhold', 'glomp', 'highfive'];
+
+  if (stickerCommands.includes(cmd)) {
+    const packname = `joel-MD`;
+    const author = 'bot';
+
+    try {
+      const { data } = await axios.get(`https://api.waifu.pics/sfw/${cmd}`);
+      if (data && data.url) {
+        gss.sendImageAsSticker(m.from, data.url, m, { packname, author });
+      } else {
+        m.reply('Error fetching sticker.');
+      }
+    } catch (error) {
+      console.error('Error fetching sticker:', error);
+      m.reply('Error fetching sticker.');
+    }
+  }
+};
+
+export default stickerCommandHandler;
