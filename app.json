@@ -21,7 +21,7 @@
     "AUTO_STATUS_SEEN": {
       "description": "make it true if you want bot to view status",
       "required": false,
-      "value": ""
+      "value": "true"
     },
     "AUTO_READ": {
       "description": "make it true if you want bot to read message",
@@ -41,7 +41,7 @@
     "ALWAYS_ONLINE": {
       "description": "make it true if you want bot to show always online",
       "required": false,
-      "value": ""
+      "value": "true"
     },
     "AUTO_BLOCK": {
       "description": "make it true if you want bot to auto block only 212 numbers",
@@ -56,7 +56,7 @@
     "AUTO_STATUS_REPLY": {
       "description": "make it true if you want to send auto message after status seen",
       "required": false,
-      "value": ""
+      "value": "true"
     },
     "STATUS_READ_MSG": {
       "description": "enter your status reply message",
